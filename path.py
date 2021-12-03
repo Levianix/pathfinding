@@ -1,32 +1,19 @@
-matriz=[["A","B","C","D","E"],
-        ["F","G","H","I","J"],
-        ["K","L","M","O","P"],
-        ["Q","R","R","S","T"],
-        ["U","V","W","X","Y"],
-        ]
+grafo={
+    "A": ("B","G","F"),
+    "F": ("A","B","G","L","K"),
+    "K": ("F","G","L","R","Q"),
+    "Q": ("K","L","R","V","U"),
+    "U": ("Q","R","V")
+}
 
-"""
-for m in matriz:
-    print(m)
-"""
-
-#"""
-lisAb=[]
-lisCe=[]
-for f in range(5):
-    #pisos
-    for c in range(5):
-        print(matriz[f][c])
-
-        #print(matriz[f][c],end=' ')
-    #print()
+for g in grafo.values():
+    print(g)
 
 
-lisAb.append("K")
+l=[]
+for k in grafo["A"]:
+    print(k)
 
-print(lisAb)
-#i=lisAb.pop(0)
+    l.append(k)
 
-#print("Desencolado: ",i)
-#"""
-
+print("l: ",l)
